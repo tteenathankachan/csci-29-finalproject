@@ -89,6 +89,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Solution.html">Solution Walk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code deep dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WhatNext.html">Whats Next</a></li>
 </ul>
 
@@ -162,22 +163,38 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="twitter_searcher.bring_tweets">
 <span class="sig-prename descclassname"><span class="pre">twitter_searcher.</span></span><span class="sig-name descname"><span class="pre">bring_tweets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_cnt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#twitter_searcher.bring_tweets" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="twitter_searcher.remove_url">
-<span class="sig-prename descclassname"><span class="pre">twitter_searcher.</span></span><span class="sig-name descname"><span class="pre">remove_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#twitter_searcher.remove_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replace URLs found in a text string with nothing
-(i.e. it will remove the URL from the string).</p>
+<dd><p>Calls twitter tweepy cursor  to query based on serach term and return the tweets after removing urls</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>txt</strong> (<em>string</em>) – A text string that you want to parse and remove urls.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>search_term</strong> (<em>string</em>) – String to be parsed.</p></li>
+<li><p><strong>api</strong> (<em>twitter api</em>) – </p></li>
+<li><p><strong>item_cnt</strong> (<em>integer</em>) – Count of tweets to be searched
+Default = 100</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>The same txt string with url’s removed.</p>
+<dd class="field-odd"><p>All tweets without URLs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="twitter_searcher.remove_url_from_text">
+<span class="sig-prename descclassname"><span class="pre">twitter_searcher.</span></span><span class="sig-name descname"><span class="pre">remove_url_from_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#twitter_searcher.remove_url_from_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace URLs found in a text string with empty strings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>txt</strong> (<em>string</em>) – String to be parsed.All URL will be removed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Strings without URLs</p>
 </dd>
 </dl>
 </dd></dl>
@@ -185,17 +202,64 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="twitter_searcher.text_transform">
 <span class="sig-prename descclassname"><span class="pre">twitter_searcher.</span></span><span class="sig-name descname"><span class="pre">text_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_tweets_no_urls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_words</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#twitter_searcher.text_transform" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Twitter function for stop word removal, removing collection words ,convert sentences into words and return a list of all words for all searches</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>all_tweets_no_urls</strong> (<em>string</em>) – All tweets from the twitter cursor for the search string</p></li>
+<li><p><strong>collection_words</strong> (<em>string</em>) – Search string sent that should be removed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>All words without urls</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="twitter_searcher.tweet_counter">
 <span class="sig-prename descclassname"><span class="pre">twitter_searcher.</span></span><span class="sig-name descname"><span class="pre">tweet_counter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_words_no_urls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#twitter_searcher.tweet_counter" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Generate key value pairs for each word as : word : counts
+:param all_words_no_urls: All words without urls
+:type all_words_no_urls: string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Word counts</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="twitter_searcher.twitter_search">
 <span class="sig-prename descclassname"><span class="pre">twitter_searcher.</span></span><span class="sig-name descname"><span class="pre">twitter_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'climatechange'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_cnt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#twitter_searcher.twitter_search" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><dl class="simple">
+<dt>Engine that pull the  data from twitter based on the input serach string , performs data wrangling</dt><dd><p>and returns the aggregated counts per words</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>search_string</strong> (<em>string</em>) – <p>strings to be searhced
+item_cnt : integer</p>
+<blockquote>
+<div><p>number of records to be serached on twitter
+default = 100</p>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List of Word counts for all tweets for serach text</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 

@@ -5,43 +5,9 @@
 
 Welcome to Search.I.T's documentation!
 ======================================
-Requirements are loose due to project flexibility, but as a guideline you should include:
-
-    An intro page to the problem
-
-    An overview of your solution
-
-    Ideally some diagram of the architecture
-
-    Tangible snippets of python code in your discussion
-
-    Some amount of sphinx autodoc, either from your 'real' code, or from toy snippets you include to describe your approach, and some other sphinx cross references.
-
-    A conclusion of the main learnings or contributions of your project
-
-    Your Science Fair presentation should be similar to the content in the writeup, but the writeup is your chance to go deeper into the topics and really explain/demonstrate etc in more depth.
 
 
-
-Twitter for Business ?
-
-   1. Total Number of Twitter Users: 340 million
-   2. Total Number of Monetizable Daily Active Users: 186 million
-   3. Total Number of Tweets Sent per Day: 500 million
-   4. Number of U.S. Adults Who Use Twitter: one in five
-
-
-Project Presentation:
-https://docs.google.com/presentation/d/1sUBOyNYSdUSjFvK7mEo8Qxa1q3Y7uNx92hCHvN5H8xk/edit?usp=sharing
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   architecture
-   Solution
-   WhatNext
+.. image::  /images/logo.png
 
 
 
@@ -51,3 +17,51 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+Overview :
+----------
+
+.. image::  /images/Overview.png
+
+**“What is New ?”,”What do people want ?”, “What is working ?”**
+
+are some of the questions businesses and researchers ask.Many times most of these are linked
+to discussions on **Twitter** .A deep dive into topics people discuss online, can give the businesses
+bounty of information to derive actionable insights . "Search.IT" tool is the answer. The tool  would enable
+searching trends on Twitter feeds. Custom search phrases will be processed using the tools twitter feed processing
+engine to derive key topics. This means, customers will have the power to query  a topic and get instant feedback
+on the related  trends at the click of a button.
+
+*Top intents for the search text will be available using graphical visualization.*
+
+
+
+Why Twitter as a source for project?
+------------------------------------
+Twitter is a *Leading* social platforms based on active users.We can access live data from actual people
+which is not derived from any big data repositry of any perticular company.
+
+.. image::  /images/twitterfacts.png
+
+
+What If?
+========
+
+What if we can take this data from twitter and allow more inteactive summry visualization.Lets take a deep dive into the architecture.
+Please follow links below.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   architecture
+   Solution
+   Code
+   WhatNext
+
+
+Project Presentation:
+https://docs.google.com/presentation/d/1sUBOyNYSdUSjFvK7mEo8Qxa1q3Y7uNx92hCHvN5H8xk/edit?usp=sharing
+
+

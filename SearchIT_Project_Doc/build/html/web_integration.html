@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>config module &mdash; Search.I.T 0.1.0 documentation</title>
+  <title>web_integration module &mdash; Search.I.T 0.1.0 documentation</title>
   
 
   
@@ -89,6 +89,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Solution.html">Solution Walk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code deep dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WhatNext.html">Whats Next</a></li>
 </ul>
 
@@ -138,13 +139,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>config module</li>
+      <li>web_integration module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/config.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/web_integration.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,8 +158,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-config">
-<span id="config-module"></span><h1>config module<a class="headerlink" href="#module-config" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-web_integration">
+<span id="web-integration-module"></span><h1>web_integration module<a class="headerlink" href="#module-web_integration" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="web_integration.dashboard">
+<span class="sig-prename descclassname"><span class="pre">web_integration.</span></span><span class="sig-name descname"><span class="pre">dashboard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#web_integration.dashboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flask function to build /dashboard using &#64;app.route decorator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>GET</em>) – Recieved the data , deserialize the data and pass to pygal for coverting into bar plots</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Data rendered to the dashboard.html</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

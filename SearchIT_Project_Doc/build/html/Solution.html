@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Whats Next" href="WhatNext.html" />
+    <link rel="next" title="Code deep dive" href="Code.html" />
     <link rel="prev" title="Architecture" href="architecture.html" /> 
 </head>
 
@@ -90,7 +90,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Solution Walk</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Solution Walk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#search-twitter-screen">Search Twitter screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-1">Case 1 :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-2">Case 2 :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-3">Case 3 :</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code deep dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WhatNext.html">Whats Next</a></li>
 </ul>
 
@@ -161,9 +168,36 @@
             
   <div class="section" id="solution-walk">
 <h1>Solution Walk<a class="headerlink" href="#solution-walk" title="Permalink to this headline">¶</a></h1>
+<p>Let’s walk through 3 searches using the tool and the real time results retrieved from the tool.This type of realtime aggregated data can enable Realtime market analytics.</p>
+<div class="section" id="search-twitter-screen">
+<h2>Search Twitter screen<a class="headerlink" href="#search-twitter-screen" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/ToolIn.png" src="_images/ToolIn.png" />
+<p>Customer can insert search string
+Example string  :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>NFL</p></li>
+<li><p>Summer Dress USA</p></li>
+<li><p>Kerala</p></li>
+</ul>
+</div></blockquote>
+<p><strong>We can see how the live Twitter data is quickly summarize and return current trends</strong></p>
+</div>
+<div class="section" id="case-1">
+<h2>Case 1 :<a class="headerlink" href="#case-1" title="Permalink to this headline">¶</a></h2>
+<p>On searching NFL the screen displays details on NFL Drafts that were created on the same day  the query was run</p>
 <img alt="_images/toolout1.png" src="_images/toolout1.png" />
+</div>
+<div class="section" id="case-2">
+<h2>Case 2 :<a class="headerlink" href="#case-2" title="Permalink to this headline">¶</a></h2>
+<p>On searching for  “Summer Dress USA” we see some of the most common trends in the clothing market for summer in America</p>
+<img alt="_images/TOOLOUT2.png" src="_images/TOOLOUT2.png" />
+</div>
+<div class="section" id="case-3">
+<h2>Case 3 :<a class="headerlink" href="#case-3" title="Permalink to this headline">¶</a></h2>
+<p>Kerala is a state in India and on a quick search, we can see the top states where we had elections on the same day .We also see names of top political parties like BJP and LDF being reference more often.</p>
 <img alt="_images/toolOut2.png" src="_images/toolOut2.png" />
+</div>
 </div>
 
 
@@ -172,7 +206,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="WhatNext.html" class="btn btn-neutral float-right" title="Whats Next" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Code.html" class="btn btn-neutral float-right" title="Code deep dive" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="architecture.html" class="btn btn-neutral float-left" title="Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
