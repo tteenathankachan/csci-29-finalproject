@@ -29,7 +29,7 @@ def dashboard():
     return render_template("dashboard.html", graph_data=graph_data)
 
 
-@app.route('/', methods=['GET', 'POST'])
+#@app.route('/', methods=['GET', 'POST'])
 def index():
     """Flask function to build / Home using @app.route decorator
 

@@ -1,5 +1,3 @@
-# flask_s3_uploads/__init__.py
-
 
 from .web_integration import app
 
