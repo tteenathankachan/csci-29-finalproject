@@ -89,8 +89,14 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#process-flow">Process Flow:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#steps-involved"><strong>Steps involved :</strong></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Solution.html">Solution Walk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code.html">Code deep dive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LessonLearnt.html">Lessons Learnt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WhatNext.html">Whats Next</a></li>
 </ul>
 
@@ -162,7 +168,24 @@
   <div class="section" id="architecture">
 <h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
 <img alt="_images/architecture.png" src="_images/architecture.png" />
+<div class="section" id="process-flow">
+<h2>Process Flow:<a class="headerlink" href="#process-flow" title="Permalink to this headline">¶</a></h2>
+<p>The tool is a python powered web-based application built using Flask and tweepy packages.User uses Web Interface to search tweets .The tool will take the text from the forms with the click of submit button. In the backend, flask uses &#64;app.route decorators. This is used for app routing to map the specific URL with the associated functions intended to perform some task. If  POST request is received, the data is fetched from the FORM tags within index.html and redirected into python back end using  flask request methods. The data is processed through a twitter custom engine .The aggregated data from the twitter engine is passed into the dashboard function, which is  &#64;app.route decorated function.The data is deserialized and converted into a list. Aggregated data is loaded into a pygal bar chart .The chart is rendered on dashboard.html using the flask render_template function. Finally, the aggregated information is available for the searched string to the end-users.</p>
 <img alt="_images/toolsused.png" src="_images/toolsused.png" />
+</div>
+<div class="section" id="steps-involved">
+<h2><strong>Steps involved :</strong><a class="headerlink" href="#steps-involved" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Cookiecutter project starter template used to  build initial project</p></li>
+<li><p>Used Pipenv Environment to integrate and run the  project modules</p></li>
+<li><p>Used Flask  to integrate the HTML based web pages with the website</p></li>
+<li><p>Flask Passes search string  to twitter cursor using custom .website.twitter_searcher module that cleans and aggregates that data</p></li>
+<li><p>NLTK library used for data preprocessing, stop word removals.</p></li>
+<li><p>Data is aggregated and then sent into the dashboard function.</p></li>
+<li><p>Pygal is employed to generate horizontal bar charts</p></li>
+<li><p>Rendered plots back into dashboard.html using flask render_template function</p></li>
+</ul>
+</div>
 </div>
 
 
